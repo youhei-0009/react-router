@@ -1,4 +1,4 @@
-import { BrowserRouter, Link, Switch, Route } from "react-router-dom"
+import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
 
 import './App.css';
 import { Home } from './Home';
@@ -16,11 +16,11 @@ export default function App() {
           <br />
           <Link to="/page2">Page2</Link>
         </div>
-        <Switch>
-          <Route path="/page1">
-            <Page1 />
-          </Route>
-        </Switch>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/page1" element={<Page1 />} />
+          <Route path="/page2" element={<Page2 />} />
+        </Routes>
       </BrowserRouter>
     </>
   );
