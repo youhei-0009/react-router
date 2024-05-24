@@ -14,7 +14,7 @@ export default function App() {
           <br />
           <Link to="/page2">Page2</Link>
           <br />
-          <Link to="/posts">Posts</Link>
+          {/*<Link to="/posts">Posts</Link>*/}
         </div>
         <Router />
       </BrowserRouter>

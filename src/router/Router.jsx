@@ -1,12 +1,15 @@
 import { Routes, Route } from "react-router-dom";
 import { Home } from '../Home';
+{/*
 import { Page1 } from '../Page1';
 import { Page2 } from '../Page2';
 import { Page1DetailA } from "../Page1DetailA";
 import { Page1DetailB } from "../Page1DetailB";
 import { Posts } from "../Posts";
 import { Post } from "../Post";
+*/}
 import { page1Routes } from "./Page1Routes";
+import { page2Routes } from "./Page2Routes";
 
 export const Router = () => {
     return (
@@ -15,6 +18,9 @@ export const Router = () => {
 
         {page1Routes.map((route) => (
             <Route key={route.path} exact={route.exact} path={`/page1${route.path}`} element={route.children} />
+        ))}
+        {page2Routes.map((route) => (
+            <Route key={route.path} exact={route.exact} path={`/page2${route.path}`} element={route.children} />
         ))}
         {/*
         <Route path="/page1" element={<Page1 />} />
@@ -32,10 +38,12 @@ export const Router = () => {
           )}
         />
         */}
+        {/*
         <Route path="/page2" element={<Page2 />} />
         <Route path="/posts" element={<Posts />} >
           <Route path=":postId" element={<Post />} />
         </Route>
+        */}
       </Routes>
 
     )
